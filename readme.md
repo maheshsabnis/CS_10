@@ -1,3 +1,14 @@
+# C# 9.0
+1. C# 9.0 introduces record types. You use the record keyword to define a reference type that provides built-in functionality for encapsulating data. 
+	- While records can be mutable, they are primarily intended for supporting immutable data models
+	- They don't support inheritance.
+	- They use more memory in some scenarios, since every instance has a complete copy of all of the data. 
+	- A record can inherit from another record. However, a record can't inherit from a class, and a class can't inherit from a record.
+	- Syntax
+```csharp
+
+```
+
 # C#10
 1. Glabal Using
 	- Instead of having a 'using' statement for importing namespaces in each code file, add a new file in the project e.g. Using.cs and in this file import namespaces as
