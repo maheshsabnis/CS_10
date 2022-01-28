@@ -66,3 +66,28 @@ public static class ConstaniStringInterpolation
 
 
 ```
+
+4. Lambda Improvements
+
+- C# 9.0 Code for Lambda
+	- We used to declare the function as like shown in the following code
+	- the below function returns a string
+```csharp
+Func<string> printMessage = () => "Hi, I am a Lambda";
+Console.WriteLine(printMessage());
+```
+
+
+	- But writig the above code with was not having default type inference 
+		-  e.g. wrting the following code was producting the error
+		- Having 
+```html		
+		<LangVersion>9</LangVersion> 
+```
+		- in project file will generate an error
+			- Feature 'Inferred delegate type is not available in C3 9.0'
+	- But this is allowed in C# 10
+```csharp
+var printMessageNew = () => "Hi, I am a New Lambda";
+Console.WriteLine(printMessageNew());
+```
