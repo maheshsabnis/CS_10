@@ -6,7 +6,7 @@
 		- so now the 'System.Text.json' namespace will be available for all code files in the project and we can use classes under this namespaces.
 	- Alternatively you can also modify the Project file (.csproj) and and the using tag under the Itemgroup tag as shown below
 ```html
-		<ItemGroup>
+	<ItemGroup>
 		<Using Include="System.Text.Json"/>
 	</ItemGroup>	
 ```
@@ -40,5 +40,29 @@ namespace MyNamespace;
         public int Id { get; set; }
         public string Name { get; set; }
     }
+
+```
+	- all classes in this file will be under the MyNamespace
+
+3. Constant Interpolated Strigs
+```csharp
+namespace CS10_ConstantStringInterpolation;
+
+public static class ConstaniStringInterpolation
+{
+    private const string BaseUrl = "/data/api";
+
+    public static class Urls
+    {
+        public const string GetAll = $"{BaseUrl}/Employees";
+        // C# 10 Constant String Interpolation
+        public const string GetById = $"{BaseUrl}/{{eno:guid}}";
+        // Traditional Concatination
+        public const string GetByName = BaseUrl + "/{name:string}";
+        // Earlier
+        public static readonly string GetByLastName  = $"{BaseUrl}/{{eno:guid}}";
+    }
+}
+
 
 ```
