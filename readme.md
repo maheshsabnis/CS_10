@@ -6,9 +6,9 @@
 		- so now the 'System.Text.json' namespace will be available for all code files in the project and we can use classes under this namespaces.
 	- Alternatively you can also modify the Project file (.csproj) and and the using tag under the Itemgroup tag as shown below
 ```html
-		 &lt;ItemGroup&gt;
-		&lt;Using Include=&quot;System.Text.Json&quot;/&gt;
-	&lt;/ItemGroup&gt;	
+		<ItemGroup>
+		<Using Include="System.Text.Json"/>
+	</ItemGroup>	
 ```
 2. File Scoped Namespaces
 	- Earlier we were having the class declaraed inside the namespace
