@@ -84,9 +84,12 @@ Console.WriteLine(printMessage());
 ```html		
 		<LangVersion>9</LangVersion> 
 ```
-		- in project file will generate an error
+		
+	- in project file will generate an error
 			- Feature 'Inferred delegate type is not available in C3 9.0'
+
 	- But this is allowed in C# 10
+
 ```csharp
 var printMessageNew = () => "Hi, I am a New Lambda";
 Console.WriteLine(printMessageNew());
