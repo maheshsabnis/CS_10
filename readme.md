@@ -9,4 +9,35 @@
 		&lt;Using Include=&quot;System.Text.Json&quot;/&gt;
 	&lt;/ItemGroup&gt;	
 
-2. 
+2. File Scoped Namespaces
+	- Earlier we were having the class declaraed inside the namespace
+	- Now, instead of having the namespace block as shown in following code
+		- 
+```csharp
+		namespace MyNamespace
+		{
+			internal class MyClass
+			{
+				public int Id { get; set; }
+				public string Name { get; set; }
+			}
+		}
+```
+	- We can write code as shown below
+		- File Scoped Namespace
+```csharp
+namespace MyNamespace;
+
+    internal class MyClass
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+    }
+
+    internal class MyClass1
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+    }
+
+```
