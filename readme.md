@@ -5,4 +5,6 @@
 			- e.g. global using System.Text.json;
 		- so now the 'System.Text.json' namespace will be available for all code files in the project and we can use classes under this namespaces.
 	- Alternatively you can also modify the Project file (.csproj) and and the using tag under the Itemgroup tag as shown below
-		- 
+		- <ItemGroup>
+		<Using Include="System.Text.Json"/>
+	</ItemGroup>	
